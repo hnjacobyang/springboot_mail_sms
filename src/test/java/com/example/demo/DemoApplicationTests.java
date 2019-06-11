@@ -66,7 +66,7 @@ public class DemoApplicationTests {
 
 
        subject = "发送邮件测试" + subject;
-        mailService.sendSimpleMail("yangyage1@crbeverage.com", subject, "大家好，这是我用springboot进行发送邮件测试");
+        mailService.sendSimpleMail("jacobingd@foxmail.com", subject, "大家好，这是我用springboot进行发送邮件测试");
     }
 
     /**
@@ -75,7 +75,7 @@ public class DemoApplicationTests {
     @Test
     public void sendHtmlMail() {
         String content = "<html><body><h3><font color=\"red\">" + "大家好，这是springboot发送的HTML邮件" + "</font></h3></body></html>";
-        mailService.sendHtmlMail("yangyage1@crbeverage.com", "发送邮件测试", content);
+        mailService.sendHtmlMail("jacobingd@foxmail.com", "发送邮件测试", content);
     }
 
     /**
@@ -85,7 +85,7 @@ public class DemoApplicationTests {
     public void sendAttachmentMail() {
         String content = "<html><body><h3><font color=\"red\">" + "大家好，这是springboot发送的HTML邮件，有附件哦" + "</font></h3></body></html>";
         String filePath = "D:\\2.xlsx";
-        mailService.sendAttachmentMail("yangyage1@crbeverage.com", "发送邮件测试", content, filePath);
+        mailService.sendAttachmentMail("jacobingd@foxmail.com", "发送邮件测试", content, filePath);
     }
 
     /**
@@ -97,12 +97,12 @@ public class DemoApplicationTests {
         String rscId = "001";
         String content = "<html><body><h3><font color=\"red\">" + "大家好，这是springboot发送的HTML邮件，有图片哦" + "</font></h3>";
 //                + "<img src=\'cid:" + rscId + "\'></body></html>";
-        mailService.sendInlineResourceMail("yangyage1@crbeverage.com", "发送邮件测试", content, rscPath, rscId);
+        mailService.sendInlineResourceMail("jacobingd@foxmail.com", "发送邮件测试", content, rscPath, rscId);
     }
 
     @Test
     public void  sendSMS() {
-          textMessageService.sendTextMessage("*********","test000");
+          textMessageService.sendTextMessage("153********","test000");
     }
 
 
